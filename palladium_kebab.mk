@@ -21,19 +21,29 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from kebab device
 $(call inherit-product, device/oneplus/kebab/device.mk)
 
-# Inherit some common Havoc-OS stuff.
-$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
+# Inherit some common Palladium-OS stuff.
+$(call inherit-product, vendor/palladium/config/common_full_phone.mk)
 
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
 # Official
-HAVOC_BUILD_TYPE := Official
-HAVOC_MAINTAINER := Chandu
-HAVOC_GROUP_URL := https://t.me/havoc_oneplus8
+PALLADIUM_BUILD_TYPE := OFFICIAL
+
+# FOD
+EXTRA_FOD_ANIMATIONS := true
+TARGET_HAS_FOD := true
+
+# Palladium Specific props
+PRODUCT_PRODUCT_PROPERTIES += \
+  ro.palladiumdevice.maintainer=Chandu \
+  ro.palladiumdevice.battery=4500mAh \
+  ro.palladiumdevice.camera=48+16+5+2MP \
+  ro.palladiumdevice.cpu=SDM865 \
+  ro.palladiumdevice.display=6.55
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := havoc_kebab
+PRODUCT_NAME := palladium_kebab
 PRODUCT_DEVICE := kebab
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
@@ -43,4 +53,7 @@ PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_DEVICE=OnePlus8T \
-    PRODUCT_NAME=OnePlus8T
+    PRODUCT_NAME=OnePlus8T \
+    PRIVATE_BUILD_DESC="coral-user 11 RQ3A.210905.001 7511028 release-keys"
+
+BUILD_FINGERPRINT := google/coral/coral:11/RQ3A.211001.001/7641976:user/release-keys

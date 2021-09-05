@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/havoc_kebab.mk
+    $(LOCAL_DIR)/palladium_kebab.mk
 
 COMMON_LUNCH_CHOICES := \
-    havoc_kebab-user \
-    havoc_kebab-userdebug \
-    havoc_kebab-eng
+    palladium_kebab-user \
+    palladium_kebab-userdebug \
+    palladium_kebab-eng
