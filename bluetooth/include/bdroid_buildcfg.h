@@ -1,6 +1,7 @@
 /*
  *  Copyright (c) 2013, The Linux Foundation. All rights reserved.
- *  Not a Contribution.
+ *  Not a Contribution, Apache license notifications and license are retained
+ *  for attribution purposes only.
  *
  * Copyright (C) 2012 The Android Open Source Project
  * Copyright (C) 2018 The LineageOS Project
@@ -24,10 +25,8 @@
 #define BTM_DEF_LOCAL_NAME "OnePlus 8T"
 // Disables read remote device feature
 #define MAX_ACL_CONNECTIONS   16
-#define MAX_L2CAP_CHANNELS    32
-#define BTM_WBS_INCLUDED   TRUE
-#define BTIF_HF_WBS_PREFERRED   TRUE
+#define MAX_L2CAP_CHANNELS    16
 #define BLE_VND_INCLUDED   TRUE
-#define GATT_MAX_PHY_CHANNEL  10
-#define AVDT_NUM_SEPS 35
+/* Increasing SEPs to 12 from 6 to support SHO/MCast i.e. two streams per codec */
+#define AVDT_NUM_SEPS 12
 #endif
