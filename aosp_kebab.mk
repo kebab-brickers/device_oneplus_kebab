@@ -22,28 +22,13 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/kebab/device.mk)
 
 # Inherit some common Palladium-OS stuff.
-$(call inherit-product, vendor/palladium/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
-# Official
-PALLADIUM_BUILD_TYPE := OFFICIAL
-
-# FOD
-EXTRA_FOD_ANIMATIONS := true
-TARGET_HAS_FOD := true
-
-# Palladium Specific props
-PRODUCT_PRODUCT_PROPERTIES += \
-  ro.palladiumdevice.maintainer=Chandu \
-  ro.palladiumdevice.battery=4500mAh \
-  ro.palladiumdevice.camera=48+16+5+2MP \
-  ro.palladiumdevice.cpu=SDM865 \
-  ro.palladiumdevice.display=6.55
-
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := palladium_kebab
+PRODUCT_NAME := aosp_kebab
 PRODUCT_DEVICE := kebab
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
