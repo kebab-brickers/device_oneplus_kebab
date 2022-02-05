@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/yaap_kebab.mk
+    $(LOCAL_DIR)/hentai_kebab.mk
 
 COMMON_LUNCH_CHOICES := \
-    yaap_kebab-user \
-    yaap_kebab-userdebug \
-    yaap_kebab-eng
+    hentai_kebab-user \
+    hentai_kebab-userdebug \
+    hentai_kebab-eng
